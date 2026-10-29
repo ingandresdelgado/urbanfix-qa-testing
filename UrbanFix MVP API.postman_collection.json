@@ -1,0 +1,43 @@
+{
+  "info": {
+    "_postman_id": "c7e6a5ff-2ae9-45f8-a692-bc64fc5b35a5",
+    "name": "UrbanFix MVP API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "59289377"
+  },
+  "item": [
+    {
+      "name": "POST Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\",\r\n  \"user\": {\r\n    \"id\": 1,\r\n    \"name\": \"Juan\",\r\n    \"role\": \"CLIENTE\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://new-mock-18a107.mock.ingandresdelgado-24024391-2549785.postman.dev/api/auth/login",
+          "protocol": "https",
+          "host": [
+            "new-mock-18a107",
+            "mock",
+            "ingandresdelgado-24024391-2549785",
+            "postman",
+            "dev"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
