@@ -1,0 +1,59 @@
+{
+  "usuarios": [
+    {
+      "id": "uuid-cliente-001",
+      "nombre": "Juan Cliente",
+      "email": "juan@test.com",
+      "password": "Password123", 
+      "rol": "CLIENTE",
+      "especialidad": null
+    },
+    {
+      "id": "uuid-tecnico-001",
+      "nombre": "Pedro Plomero",
+      "email": "pedro@test.com",
+      "password": "Password123",
+      "rol": "TECNICO",
+      "especialidad": "Plomeria"
+    },
+    {
+      "id": "uuid-tecnico-002",
+      "nombre": "Maria Electricista",
+      "email": "maria@test.com",
+      "password": "Password123",
+      "rol": "TECNICO",
+      "especialidad": "Electricidad"
+    },
+    {
+      "id": "uuid-admin-001",
+      "nombre": "Admin UrbanFix",
+      "email": "admin@test.com",
+      "password": "Password123",
+      "rol": "ADMIN",
+      "especialidad": null
+    }
+  ],
+  "solicitudes": [
+    {
+      "id": "req-001",
+      "cliente_id": "uuid-cliente-001",
+      "tecnico_id": null,
+      "titulo": "Fuga de agua en el baño",
+      "descripcion": "El inodoro pierde agua por la base.",
+      "categoria": "Plomeria",
+      "estado": "PENDIENTE",
+      "fecha_creacion": "2026-10-31T10:00:00Z"
+    },
+    {
+      "id": "req-002",
+      "cliente_id": "uuid-cliente-001",
+      "tecnico_id": "uuid-tecnico-002",
+      "titulo": "Instalación de lámpara",
+      "descripcion": "Instalar lámpara de techo en la sala.",
+      "categoria": "Electricidad",
+      "estado": "ACEPTADA",
+      "fecha_creacion": "2026-10-30T09:00:00Z",
+      "fecha_aceptacion": "2026-10-30T09:30:00Z"
+    }
+  ]
+}
