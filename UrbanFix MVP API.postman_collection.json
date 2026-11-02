@@ -1,9 +1,10 @@
 {
   "info": {
-    "_postman_id": "c7e6a5ff-2ae9-45f8-a692-bc64fc5b35a5",
+    "_postman_id": "522ec5fb-a27a-4e35-bb44-1f5ab2b8e82a",
     "name": "UrbanFix MVP API",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "59289377"
+    "_exporter_id": "59289377",
+    "_collection_link": "https://go.postman.co/collection/59289377-522ec5fb-a27a-4e35-bb44-1f5ab2b8e82a?source=collection_link"
   },
   "item": [
     {
@@ -13,7 +14,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\",\r\n  \"user\": {\r\n    \"id\": 1,\r\n    \"name\": \"Juan\",\r\n    \"role\": \"CLIENTE\"\r\n  }\r\n}",
+          "raw": "{\r\n  \"email\": \"juan@test.com\",\r\n  \"password\": \"Password123\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -21,23 +22,72 @@
           }
         },
         "url": {
-          "raw": "https://new-mock-18a107.mock.ingandresdelgado-24024391-2549785.postman.dev/api/auth/login",
+          "raw": "https://6d4656a8-c2e1-45da-a9c3-ec2d7d81f5f7.mock.pstmn.io/api/auth/login/api/auth/login",
           "protocol": "https",
           "host": [
-            "new-mock-18a107",
+            "6d4656a8-c2e1-45da-a9c3-ec2d7d81f5f7",
             "mock",
-            "ingandresdelgado-24024391-2549785",
-            "postman",
-            "dev"
+            "pstmn",
+            "io"
           ],
           "path": [
+            "api",
+            "auth",
+            "login",
             "api",
             "auth",
             "login"
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "POST Login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"juan@test.com\",\r\n  \"password\": \"Password123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://6d4656a8-c2e1-45da-a9c3-ec2d7d81f5f7.mock.pstmn.io/api/auth/login/api/auth/login",
+              "protocol": "https",
+              "host": [
+                "6d4656a8-c2e1-45da-a9c3-ec2d7d81f5f7",
+                "mock",
+                "pstmn",
+                "io"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login",
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [],
+          "cookie": [
+            {
+              "expires": "Invalid Date",
+              "domain": "",
+              "path": ""
+            }
+          ],
+          "body": "{\r\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\",\r\n  \"user\": {\r\n    \"id\": \"uuid-cliente-001\",\r\n    \"name\": \"Juan Cliente\",\r\n    \"role\": \"CLIENTE\"\r\n  }\r\n}"
+        }
+      ]
     }
   ]
 }
