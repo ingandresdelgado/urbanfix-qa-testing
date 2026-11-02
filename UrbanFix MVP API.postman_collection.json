@@ -9,6 +9,34 @@
   "item": [
     {
       "name": "POST Login",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "// 1. Validar que el Status Code sea 200 OK\r",
+              "pm.test(\"Validar que el status sea 200 OK\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "// 2. Validar que la respuesta incluya un token\r",
+              "pm.test(\"Validar que la respuesta contenga un token\", function () {\r",
+              "    var jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData).to.have.property(\"token\");\r",
+              "});\r",
+              "\r",
+              "// 3. Validar que el rol del usuario sea CLIENTE\r",
+              "pm.test(\"Validar que el rol del usuario sea CLIENTE\", function () {\r",
+              "    var jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData.user.role).to.eql(\"CLIENTE\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
       "request": {
         "method": "POST",
         "header": [],
